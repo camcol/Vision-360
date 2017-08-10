@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let compte of observableCompte | async" >
+     {{compte.id}}
+  </li>
+</ul>
+
+<div *ngIf="errorMessage"> {{errorMessage}} </div>

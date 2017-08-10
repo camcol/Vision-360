@@ -1,0 +1,38 @@
+[
+	{
+	"id": 1,
+	"firstname": "Pierre",
+	"lastname": "Dupond",
+	"phone" : "06.06.06.06.06",
+	"mail": "pierre.dupond@gmail.com",
+	"picture": "dupond.jpg"
+	},
+	
+	{
+	"id": 2,
+	"firstname": "Juliette",
+	"lastname": "Dupond",
+	"phone" : "06.06.06.06.07",
+	"mail": "juliette.dupond@gmail.com",
+	"picture": "jdupond.jpg"
+	},
+	
+	{
+	"id": 3,
+	"firstname": "Pauline",
+	"lastname": "Dupond",
+	"phone" : "06.06.06.06.08",
+	"mail": "pauline.dupond@gmail.com",
+	"picture": "pdupond.jpg"
+	},
+	
+	{
+	"id": 4,
+	"firstname": "Paul",
+	"lastname": "Johnson",
+	"phone" : "06.06.06.06.09",
+	"mail": "paul.johnson@gmail.com",
+	"picture": "pjohnson.jpg"
+	}
+]
+

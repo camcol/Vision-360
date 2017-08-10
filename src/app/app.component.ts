@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <a routerLink="/homepage" routerLinkActive="active"></a>
     </nav>
     <router-outlet></router-outlet>
+
   `,
   styleUrls: ['./app.component.css']
 })

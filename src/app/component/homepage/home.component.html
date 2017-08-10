@@ -1,32 +1,24 @@
-<perfect-scrollbar class="home-container" [config]="config">
+<perfect-scrollbar class="home-container" (click)="toggleMenuClosed($event)">
+
     <div class="top-of-page">
-        <div md-menu>
-                <button class="btn" md-menu-open></button>
-                <ul class="md-menu-content">
-                    <li><img src="./assets/dupond.jpg"></li>
-                    <li><a class="md-menu-item">Mes comptes</a></li>
-                    <li><a class="md-menu-item">Mon argent</a></li>
-                    <li><a class="md-menu-item">Mon budget</a></li>
-                    <li><a class="md-menu-item">Mes procurations</a></li>
-                    <li><a class="md-menu-item">Mes virements</a></li>
-                    <li><a class="md-menu-item">Mes crédits</a></li>
-                    <li><a class="md-menu-item">Mes assurances</a></li>
-                    <li><a class="md-menu-item">Mes services mobiles</a></li>
-                    <li><a class="md-menu-item">Mes documents</a></li>
-                    <li><a class="md-menu-item">Actualités et nouveautés</a></li>
-                </ul>
-        </div>
+        <button (click)="toggleMenuOpen($event)" class="hamburger">
+            <span>toggle menu</span>
+        </button>
+        <app-menu [@slideInOut]="menuState"></app-menu>
+        <button (click)="changePageAlerte($event)" class="alerte"></button>
+        <button class="mail"></button>
     </div>
 
-    <div class="banques"></div>
-    
-        <div class="comptes-cchq">CCHQ MR Pierre DUPOND</div>
-        <div class="comptes-joint">Compte joint Mr et Mme Pierre DUPOND</div>
-    
-        <div class="epargnes-livret-a">LIVRET A</div>
-        <div class="epargnes-cel">CEL</div>
+    <ul id="banques">
+        <li><a routerLink="/Home"  routerLinkActive="active">Sopra bank</a></li>
+        <li><a routerLink="/OtherBank"  routerLinkActive="active">Other bank</a></li>
+        <li><a routerLink="/MesComptes" routerLinkActive="active">Mes comptes</a></li>
+    </ul>
 
-        <div class="investissements-pel">PEL</div>
+    <div class="container">
+        <div class="comptes"><br><app-compte></app-compte></div>
+        <div class="comptes"><br>&nbsp;&nbsp;Livret A </div>
+    </div>
 
 
 </perfect-scrollbar>

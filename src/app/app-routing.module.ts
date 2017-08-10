@@ -4,20 +4,10 @@ import {HomepageComponent} from "./component/homepage/home.component";
 
 
 const ROUTES = [
-    {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'home',
-    },
-    {   
-        path:'home', 
-        children:[
-            {
-                path:'',
-                component: HomepageComponent
-            }
-        ]
-    },
+    { path: '', redirectTo: '/Home', pathMatch: 'full' },
+    { path: 'Home',  component: HomepageComponent },
+    { path: 'OtherBank', component: HomepageComponent },
+    { path: 'MesComptes', component: HomepageComponent },  
 ];
 
 @NgModule({

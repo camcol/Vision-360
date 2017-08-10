@@ -1,0 +1,29 @@
+/*Design du menu*/
+:host {
+  background-size: cover;
+  background: whitesmoke;
+  color: dimgrey;
+  position: fixed;
+  top: 0;
+  left: -246px;
+  bottom: 0;
+  min-width: 246px;
+  max-width: 246px;
+  z-index: 9999;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*Design de chaque ul*/
+ul {
+  font-size: 17px;
+  margin-top: 0;
+  padding-left: 0;
+  margin-right: 0;
+  list-style: none;
+}
+
+li{
+  cursor : pointer;
+  padding-left: 5px;
+  margin: 17px;
+}
