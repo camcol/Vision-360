@@ -5,7 +5,7 @@
   color: dimgrey;
   position: fixed;
   top: 0;
-  left: -246px;
+  left: -247px;
   bottom: 0;
   min-width: 246px;
   max-width: 246px;
@@ -22,8 +22,19 @@ ul {
   list-style: none;
 }
 
-li{
+
+
+#menu li {
   cursor : pointer;
   padding-left: 5px;
   margin: 17px;
+}
+
+#menu li a {
+    display: block;
+    color: lightgrey;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 8px;
+    text-decoration: none;
 }

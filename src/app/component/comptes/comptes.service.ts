@@ -8,7 +8,7 @@ import { Compte } from './comptes';
 
 @Injectable()
 export class CompteService {
-    url = "./assets/BaseTiers.json";
+    url = "./assets/compte.json";
     constructor(private http:Http) { }
     getCompteWithObservable(): Observable<Compte[]> {
         return this.http.get(this.url)

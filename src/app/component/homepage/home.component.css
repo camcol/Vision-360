@@ -124,30 +124,3 @@
   background-size: 26px;
   border: 0;
 }
-
-@media all and (max-width: 500px){
-/*Bloc des comptes*/
-  .comptes {
-    background: white;
-    height: 100px;
-    margin: 30px 20px 20px 20px;
-    border-radius: 8px;
-  }
-}
-
-@media all and (min-width: 500px){
-/*Bloc des comptes*/
-  .comptes {
-    background: whitesmoke;
-    height: 100px;
-    margin: 20px 10px 20px 10px;
-    border-radius: 8px;
-    width: 50%;
-  }
-  .container{
-    display: flex;
-    justify-content: center;
-    max-width: 900px;
-  }
-}
-

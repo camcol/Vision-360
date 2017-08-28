@@ -1,7 +1,22 @@
-<ul>
-  <li *ngFor="let compte of observableCompte | async" >
-     {{compte.id}}
-  </li>
-</ul>
+<h1>Comptes</h1>    <div class="container">
+<div *ngFor="let compte of observableCompte | async" >
+
+        <div class="comptes"><br>
+            <h2>{{compte.nature}}</h2>
+            <h3><p align="left">{{compte.libelle}}</p></h3>
+            <h4><p align="left">{{compte.numero}}</p></h4>
+            <h5><p align="right">{{compte.montant}}</p></h5>
+        
+            <h3><p align="left">{{compte.libellecartedebitdiffere}}</p></h3> 
+            <h4><p align="left">{{compte.numerocartedebitdiffere}}</p></h4>
+            <h6><p align="right">{{compte.montantcartedebitdiffere}}</p></h6>
+
+            <h3><p align="left">{{compte.libellecarteretrait}}</p></h3>
+            <h4><p align="left">{{compte.numerocarteretrait}}</p></h4>
+        </div>
+    </div>
+</div>
 
 <div *ngIf="errorMessage"> {{errorMessage}} </div>
+
+

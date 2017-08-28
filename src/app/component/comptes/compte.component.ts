@@ -7,7 +7,8 @@ import { Compte } from './comptes';
 
 @Component({
    selector: 'app-compte',
-   templateUrl: './compte.component.html'
+   templateUrl: './compte.component.html',
+   styleUrls: ['./compte.component.css'] 
 })
 export class CompteComponent implements OnInit { 
    observableCompte: Observable<Compte[]>

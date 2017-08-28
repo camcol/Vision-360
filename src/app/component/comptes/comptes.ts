@@ -1,7 +1,6 @@
 export class Compte {
    id: number;
-   firstname: string;
-   lastname: string;
+   libelle: string;
    constructor() { 
    }
 } 

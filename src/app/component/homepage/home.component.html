@@ -5,8 +5,8 @@
             <span>toggle menu</span>
         </button>
         <app-menu [@slideInOut]="menuState"></app-menu>
-        <button (click)="changePageAlerte($event)" class="alerte"></button>
-        <button class="mail"></button>
+        <button class="alerte" routerLink="/MesAlertes"></button>
+        <button class="mail" routerLink="/Mail"></button>
     </div>
 
     <ul id="banques">
@@ -15,10 +15,8 @@
         <li><a routerLink="/MesComptes" routerLinkActive="active">Mes comptes</a></li>
     </ul>
 
-    <div class="container">
-        <div class="comptes"><br><app-compte></app-compte></div>
-        <div class="comptes"><br>&nbsp;&nbsp;Livret A </div>
-    </div>
+    <app-compte></app-compte>
+   
 
 
 </perfect-scrollbar>

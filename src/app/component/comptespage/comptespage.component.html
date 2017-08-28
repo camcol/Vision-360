@@ -1,0 +1,19 @@
+<perfect-scrollbar class="home-container" (click)="toggleMenuClosed($event)">
+
+    <div class="top-of-page">
+        <button (click)="toggleMenuOpen($event)" class="hamburger">
+            <span>toggle menu</span>
+        </button>
+        <app-menu [@slideInOut]="menuState"></app-menu>
+        <button class="alerte" routerLink="/MesAlertes"></button>
+        <button class="mail" routerLink="/Mail"></button>
+    </div>
+
+    <ul id="banques">
+        <li><a routerLink="/Home"  routerLinkActive="active">Sopra bank</a></li>
+        <li><a routerLink="/OtherBank"  routerLinkActive="active">Other bank</a></li>
+        <li><a routerLink="/MesComptes" routerLinkActive="active">Mes comptes</a></li>
+    </ul>
+
+</perfect-scrollbar>
+

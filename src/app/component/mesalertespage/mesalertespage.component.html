@@ -1,0 +1,21 @@
+<perfect-scrollbar class="home-container" (click)="toggleMenuClosed($event)">
+      <div class="top-of-page">
+        <button (click)="toggleMenuOpen($event)" class="hamburger">
+            <span>toggle menu</span>
+        </button>
+        <app-menu [@slideInOut]="menuState"></app-menu>
+        <button class="alerte" routerLink="/MesAlertes"></button>
+        <button class="mail" routerLink="/Mail"></button>
+    </div>
+
+    <ul id="choix">
+        <li><a routerLink="/MesAlertes"  routerLinkActive="active">Mes alertes</a></li>
+        <li><a routerLink="/MesCommandes"  routerLinkActive="active">Mes commandes</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="alertes"></div>
+        <div class="alertes"></div>
+    </div>
+
+</perfect-scrollbar>

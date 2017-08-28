@@ -1,4 +1,5 @@
-[
+{
+"personnes":[
 	{
 	"id": 1,
 	"firstname": "Pierre",
@@ -35,4 +36,4 @@
 	"picture": "pjohnson.jpg"
 	}
 ]
-
+}

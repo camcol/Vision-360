@@ -36,8 +36,4 @@ export class HomepageComponent {
         this.menuState = this.menuState === 'in' ? 'out' : 'out';
         e.stopPropagation();
     }
-    changePageAlerte(e){
-
-    }
-
 }
