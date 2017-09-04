@@ -1,48 +1,68 @@
-[
-	{
-	"id":"comptes",
-	"nature":"CCHQ",
-	"libelle":" MR Pierre DUPOND",
-	"numero":"n°12345678912",
-	"montant":"+ 4 354,38 €",
-	"IBAN": "FR12 1212 1212 1212 1212 12",
-	"BIC" : "AAAAAAAA121",
-	"libellecartedebitdiffere":"Carte à débit différé",
-	"numerocartedebitdiffere":"xxxx xxxx x254 1234",
-	"montantcartedebitdiffere":"- 1 980,00 €",
-	"libellecarteretrait":"Carte de retrait",
-	"numerocarteretrait":"xxxx xxxx x264 2542"
-	},
-	
-	{
-	"id":"comptes",
-	"nature":"Compte joint",
-	"libelle":"MR et MME Pierre DUPOND",
-	"numero":"n°12345678913",
-	"montant":"+ 9 489,86 €",
-	"libellecarteretrait":"Carte de retrait",
-	"numerocarteretrait":"xxxx xxxx x267 8665"
-	},
-
-	{
-	"id":"epargnes",
-	"nature":"Livret A",
-	"numero":"n°12345678916",
-	"montant":"+ 3 561,25 €"
-	},
-
-	{
-	"id":"epargnes",
-	"nature":"CEL",
-	"numero":"n°12345678917",
-	"montant":"+ 2 563,25 €"
-	},
-
-	{
-	"id":"investissements",
-	"nature":"PEL",
-	"numero":"n°12345678918",
-	"montant":"+ 3 652,14 €"
-	}
-		
-]
+{
+  "comptes":[
+    {
+      "id": 1,
+	    "nature":"CCHQ",
+      "libelle":" MR Pierre DUPOND",
+      "numero":"n°12345678912",
+      "montant":"+ 4 354,38",
+      "devise":"€",
+      "IBAN": "FR12 1212 1212 1212 1212 12",
+      "BIC" : "AAAAAAAA121",
+      "libellecartedebitdiffere":"Carte à débit différé",
+      "numerocartedebitdiffere":"xxxx xxxx x254 1234",
+      "montantcartedebitdiffere":"- 1 980,00",
+      "devisecartedebitdiffere":"€",
+      "libellecarteretrait":"Carte de retrait",
+      "numerocarteretrait":"xxxx xxxx x264 2542"
+    },
+    {
+      "id": 2,
+      "nature":"Compte joint",
+      "libelle":"MR et MME Pierre DUPOND",
+      "numero":"n°12345678913",
+      "signe": "+",
+      "montant":"9 489,86",
+      "devise":"€",
+      "libellecarteretrait":"Carte de retrait",
+      "numerocarteretrait":"xxxx xxxx x267 8665"
+    }
+  ],
+  "epargnes":[
+    {
+      "id": 3,
+      "nature":"Livret A",
+      "numero":"n°12345678916",
+      "signe": "+",
+      "montant":"3 561,25",
+      "devise":"€"
+    },
+        {
+      "id": 3,
+      "nature":"Livret A",
+      "numero":"n°12345678916",
+      "signe": "+",
+      "montant":"3 561,25",
+      "devise":"€"
+    },
+    {
+      "id": 4,
+      "nature":"CEL",
+      "numero":"n°12345678917",
+      "signe": "+",
+      "montant":"2 563,25",
+      "devise":"€"
+    }
+  ],
+  
+  "investissements":[
+    {
+      "id": 5,
+  	  "nature":"PEL",
+	    "numero":"n°12345678918",
+      "signe": "+",
+	    "montant":"3 652,14",
+      "devise":"€"
+    }
+  ]
+}

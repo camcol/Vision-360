@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { CompteService } from "./comptes.service";
-import { Compte } from './comptes';
 
 
 @Component({
@@ -11,14 +10,13 @@ import { Compte } from './comptes';
    styleUrls: ['./compte.component.css'] 
 })
 export class CompteComponent implements OnInit { 
-   observableCompte: Observable<Compte[]>
-   compte: Compte[];
-   errorMessage: String;
+   compteToDisplay: Object;
+   
    constructor(private compteService: CompteService) { }
+   
    ngOnInit(): void {
-        this.observableCompte = this.compteService.getCompteWithObservable();
-	this.observableCompte.subscribe(
-            compte => this.compte = compte,
-            error =>  this.errorMessage = <any>error);
+        this.compteService.getCompte().subscribe(data => {
+                this.compteToDisplay = data;
+        });
    }
 } 

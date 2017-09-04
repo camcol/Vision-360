@@ -1,22 +1,74 @@
-<h1>Comptes</h1>    <div class="container">
-<div *ngFor="let compte of observableCompte | async" >
+<div *ngIf="compteToDisplay !== undefined">
+    <div *ngIf="compteToDisplay.comptes !== undefined">
+        <h1>Comptes</h1>
+        <div class="container">
+            <div *ngFor="let compte of compteToDisplay.comptes"> 
+                <div class="comptes">
+                    <h2>{{compte.nature}}</h2>
+                    <h3><p align="left">{{compte.libelle}}</p></h3>
+                    <h4><p align="left">{{compte.numero}}</p></h4>
 
-        <div class="comptes"><br>
-            <h2>{{compte.nature}}</h2>
-            <h3><p align="left">{{compte.libelle}}</p></h3>
-            <h4><p align="left">{{compte.numero}}</p></h4>
-            <h5><p align="right">{{compte.montant}}</p></h5>
-        
-            <h3><p align="left">{{compte.libellecartedebitdiffere}}</p></h3> 
-            <h4><p align="left">{{compte.numerocartedebitdiffere}}</p></h4>
-            <h6><p align="right">{{compte.montantcartedebitdiffere}}</p></h6>
+                    <div *ngIf="compteToDisplay.montant == montant">
+                        <h5><p align="right">{{compte.montant}}  {{compte.devise}}</p></h5>
+                    </div>
 
-            <h3><p align="left">{{compte.libellecarteretrait}}</p></h3>
-            <h4><p align="left">{{compte.numerocarteretrait}}</p></h4>
+                    <div *ngIf="compteToDisplay.montant <= 0">
+                        <h6><p align="right">{{compte.montant}}  {{compte.devise}}</p></h6>
+                    </div>
+
+                    <h3><p align="left">{{compte.libellecartedebitdiffere}}</p></h3> 
+                    <h4><p align="left">{{compte.numerocartedebitdiffere}}</p></h4>
+                    <h6><p align="right">{{compte.signecartedebitdiffere}}  {{compte.montantcartedebitdiffere}}  {{compte.devisecartedebitdiffere}}</p></h6>
+
+                    <h3><p align="left">{{compte.libellecarteretrait}}</p></h3>
+                    <h4><p align="left">{{compte.numerocarteretrait}}</p></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="compteToDisplay.epargnes !== undefined">
+        <h1>Epargnes</h1>
+        <div class="container">
+            <div *ngFor="let compte of compteToDisplay.epargnes"> 
+                <div class="comptes">
+                    <h2>{{compte.nature}}</h2>
+                    <h3><p align="left">{{compte.libelle}}</p></h3>
+                    <h4><p align="left">{{compte.numero}}</p></h4>
+                    <h5><p align="right">{{compte.signe}}  {{compte.montant}}  {{compte.devise}}</p></h5>
+                
+                    <h3><p align="left">{{compte.libellecartedebitdiffere}}</p></h3> 
+                    <h4><p align="left">{{compte.numerocartedebitdiffere}}</p></h4>
+                    <h6><p align="right">{{compte.signecartedebitdiffere}}  {{compte.montantcartedebitdiffere}}  {{compte.devisecartedebitdiffere}}</p></h6>
+
+                    <h3><p align="left">{{compte.libellecarteretrait}}</p></h3>
+                    <h4><p align="left">{{compte.numerocarteretrait}}</p></h4>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="compteToDisplay.investissements !== undefined">
+        <h1>Investissements</h1>
+        <div class="container">
+            <div *ngFor="let compte of compteToDisplay.investissements"> 
+                <div class="comptes">
+                    <h2>{{compte.nature}}</h2>
+                    <h3><p align="left">{{compte.libelle}}</p></h3>
+                    <h4><p align="left">{{compte.numero}}</p></h4>
+                    <h5><p align="right">{{compte.signe}}  {{compte.montant}}  {{compte.devise}}</p></h5>
+                
+                    <h3><p align="left">{{compte.libellecartedebitdiffere}}</p></h3> 
+                    <h4><p align="left">{{compte.numerocartedebitdiffere}}</p></h4>
+                    <h6><p align="right">{{compte.signecartedebitdiffere}}  {{compte.montantcartedebitdiffere}}  {{compte.devisecartedebitdiffere}}</p></h6>
+
+                    <h3><p align="left">{{compte.libellecarteretrait}}</p></h3>
+                    <h4><p align="left">{{compte.numerocarteretrait}}</p></h4>
+                </div> 
+            </div>
         </div>
     </div>
 </div>
 
-<div *ngIf="errorMessage"> {{errorMessage}} </div>
 
 
